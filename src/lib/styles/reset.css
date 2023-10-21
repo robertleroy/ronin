@@ -1,0 +1,44 @@
+/* #region reset */
+:root {
+  --font-size: 16px;
+  --text-color: #2C3E50;
+  --background-color: #fff;
+  --sans-serif: sans-serif;
+  --serif: serif;
+  --monospace: monospace monospace;
+  -webkit-tap-highlight-color: transparent;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html {
+  font-size: var(--font-size);
+  text-size-adjust: 100%;
+}
+body {
+  height: 100dvh;
+  font-family: var(--sans-serif);
+  font-size: 1em;
+  line-height: 1.5;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  margin: 0;
+  overflow-y: scroll;
+}
+:where(hr) {
+  height: 0; 
+  margin: 1.5rem auto;
+  border: 1px none #ccc;
+  border-bottom-style: solid;
+}
+:where(h1, h2, h3, h4, h5, h6) { margin: 0; }
+:where(h5, h6) { line-height: 1.5rem; }
+:where(p) { margin: 0.5em 0; }
+:where(ul, ol) {
+  margin-top: 0;
+  list-style-position: inside;
+}
+:where(ul:not(ul ul), ol:not(ol ol)) { padding: 0; }
+:where(ul ul, ol ol) { padding-left: 2ch; }
+:where(pre) { white-space: pre-wrap; }
+.unset { all: unset; }
+a { color: LinkText; }
+/* #endregion reset */
